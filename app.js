@@ -34,6 +34,10 @@ app.use((req, res, next) => {
 
 app.use("/uploads", express.static("uploads"));
 
+app.get("/", (req, res) => {
+  res.send("It's working");
+});
+
 app.get("/api/posts", (req, res) => {
   res.status(200).send(postsData.get());
 });
