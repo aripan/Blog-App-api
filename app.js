@@ -1,3 +1,4 @@
+let PORT = process.env.PORT || 3000;
 const express = require("express");
 const app = express();
 const Post = require("./api/models/posts");
@@ -60,4 +61,4 @@ app.post("/api/posts", upload.single("post-image"), (req, res) => {
   res.status(201).send(newPost);
 });
 
-app.listen(3000, () => console.log("Listening on http://localhost:3000"));
+app.listen(PORT, () => console.log(`Listening on ${PORT}`));
