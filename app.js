@@ -42,8 +42,8 @@ app.get("/api/posts", (req, res) => {
   res.status(200).send(postsData.get());
 });
 
-app.get("/api/posts/:post_id", (req, res) => {
-  const postId = req.params.post_id;
+app.get("/api/posts/:id", (req, res) => {
+  const postId = req.params.id;
   const foundPost = postsData.getIndividualBlog(postId);
   if (foundPost) {
     res.status(200).send(foundPost);
