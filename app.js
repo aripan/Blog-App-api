@@ -61,4 +61,4 @@ app.post("/api/posts", upload.single("post-image"), (req, res) => {
   res.status(201).send(newPost);
 });
 
-app.listen(PORT, () => console.log(`Listening on ${PORT}`));
+app.listen(PORT);
