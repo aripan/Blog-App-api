@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const Post = require("./api/models/posts");
 let multer = require("multer");
+
 let storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, "./uploads");
